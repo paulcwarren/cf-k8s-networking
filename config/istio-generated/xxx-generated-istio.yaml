@@ -3599,8 +3599,8 @@ metadata:
       - Metas:
         - Tag: 1.6.8
           Type: resolved
-          URL: gcr.io/cf-routing/proxyv2:1.6.8
-        URL: gcr.io/cf-routing/proxyv2@sha256:61bb3c9c18e7a13fd85c2644a75ac1e0e43dc19d218c9cfacfd7ebf0accf5e4e
+          URL: docker.io/istio/proxyv2:1.6.8
+        URL: index.docker.io/istio/proxyv2@sha256:1d3a72f72814d9895cd6dbd450d6badefb353fe99f3f4a8860ec4968136c04e0
       - Metas:
         - Tag: v2.15.1
           Type: resolved
@@ -3728,7 +3728,7 @@ spec:
           value: cluster.local
         - name: ISTIO_META_CLUSTER_ID
           value: Kubernetes
-        image: gcr.io/cf-routing/proxyv2@sha256:61bb3c9c18e7a13fd85c2644a75ac1e0e43dc19d218c9cfacfd7ebf0accf5e4e
+        image: index.docker.io/istio/proxyv2@sha256:1d3a72f72814d9895cd6dbd450d6badefb353fe99f3f4a8860ec4968136c04e0
         imagePullPolicy: Always
         name: istio-proxy
         ports:
@@ -9163,15 +9163,15 @@ metadata:
   annotations:
     kbld.k14s.io/images: |
       - Metas:
-        - Tag: 1.6.8
-          Type: resolved
-          URL: gcr.io/cf-routing/proxyv2:1.6.8
-        URL: gcr.io/cf-routing/proxyv2@sha256:61bb3c9c18e7a13fd85c2644a75ac1e0e43dc19d218c9cfacfd7ebf0accf5e4e
-      - Metas:
         - Tag: latest
           Type: resolved
           URL: cfrouting/fluent-bit
         URL: index.docker.io/cfrouting/fluent-bit@sha256:e04d7985f1f8778952547bcc8c9dfeef0a9a078006ca28f6e9c4e5f455ef0eba
+      - Metas:
+        - Tag: 1.6.8
+          Type: resolved
+          URL: docker.io/istio/proxyv2:1.6.8
+        URL: index.docker.io/istio/proxyv2@sha256:1d3a72f72814d9895cd6dbd450d6badefb353fe99f3f4a8860ec4968136c04e0
   labels:
     app: istio-ingressgateway
     cloudfoundry.org/istio_version: 1.6.8
@@ -9304,7 +9304,7 @@ spec:
           value: Kubernetes
         - name: TERMINATION_DRAIN_DURATION_SECONDS
           value: "60"
-        image: gcr.io/cf-routing/proxyv2@sha256:61bb3c9c18e7a13fd85c2644a75ac1e0e43dc19d218c9cfacfd7ebf0accf5e4e
+        image: index.docker.io/istio/proxyv2@sha256:1d3a72f72814d9895cd6dbd450d6badefb353fe99f3f4a8860ec4968136c04e0
         lifecycle:
           preStop:
             exec:
@@ -9631,8 +9631,8 @@ metadata:
       - Metas:
         - Tag: 1.6.8
           Type: resolved
-          URL: gcr.io/cf-routing/pilot:1.6.8
-        URL: gcr.io/cf-routing/pilot@sha256:6aac3fae9cd6ccd030c80b85a73f6af16c8667f674d53be8b7633118fc4f3fd6
+          URL: docker.io/istio/pilot:1.6.8
+        URL: index.docker.io/istio/pilot@sha256:178a30ae6f762ba40b09dfd09acbb3584fff835cd3027815d482c8dcfb308fdb
   labels:
     app: istiod
     cloudfoundry.org/istio_version: 1.6.8
@@ -9708,7 +9708,7 @@ spec:
           value: Kubernetes
         - name: CENTRAL_ISTIOD
           value: "false"
-        image: gcr.io/cf-routing/pilot@sha256:6aac3fae9cd6ccd030c80b85a73f6af16c8667f674d53be8b7633118fc4f3fd6
+        image: index.docker.io/istio/pilot@sha256:178a30ae6f762ba40b09dfd09acbb3584fff835cd3027815d482c8dcfb308fdb
         name: discovery
         ports:
         - containerPort: 8080
@@ -10248,7 +10248,7 @@ data:
         },
         "enableHelmTest": false,
         "enabled": true,
-        "hub": "gcr.io/cf-routing",
+        "hub": "docker.io/istio",
         "imagePullPolicy": "",
         "imagePullSecrets": [],
         "istioNamespace": "istio-system",
